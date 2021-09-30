@@ -11,3 +11,4 @@ objc = "*"
 core-foundation = "*"
 cocoa = "*"
 core-graphics = { version = "*", features = ["highsierra", "elcapitan"] }
+cacao = "*"
