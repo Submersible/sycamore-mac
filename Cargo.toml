@@ -1,0 +1,13 @@
+[package]
+name = "sycamore-mac"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+sycamore = { git = "https://github.com/sycamore-rs/sycamore.git", features = [
+    "ssr",
+] }
+objc = "*"
+core-foundation = "*"
+cocoa = "*"
+core-graphics = { version = "*", features = ["highsierra", "elcapitan"] }
