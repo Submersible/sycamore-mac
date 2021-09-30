@@ -57,8 +57,13 @@ fn main() {
         })
     );
 
-    render_to_mac(|| {
-        let nodes = template! { App() };
+    render_to_mac("com.test.window", || {
+        let nodes = template! {
+            view {
+                view { "hello world" }
+                view { "horizontal layout" }
+            }
+        };
         println!("=== MacNode ===\n{:?}", nodes);
         nodes
     })
