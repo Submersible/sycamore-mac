@@ -39,9 +39,7 @@ checksum = "d9df67f7bf9ef8498769f994239c45613ef0c5899415fb58e9add412d2c1a538"
 
 [[package]]
 name = "cacao"
-version = "0.2.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f127f049857f8fbf2dad41b378c2f14aae4b888bcb3a7c42998f454fd616fa1c"
+version = "0.2.0"
 dependencies = [
  "block",
  "core-foundation",
@@ -224,6 +222,12 @@ dependencies = [
  "autocfg",
  "hashbrown",
 ]
+
+[[package]]
+name = "itoa"
+version = "0.4.8"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b71991ff56294aa922b450139ee08b3bfc70982c6b2c7562771375cf73542dd4"
 
 [[package]]
 name = "js-sys"
@@ -422,6 +426,12 @@ dependencies = [
 ]
 
 [[package]]
+name = "ryu"
+version = "1.0.5"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "71d301d4193d031abdd79ff7e3dd721168a9572ef3fe51a1517aba235bd8f86e"
+
+[[package]]
 name = "serde"
 version = "1.0.130"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -442,6 +452,17 @@ dependencies = [
 ]
 
 [[package]]
+name = "serde_json"
+version = "1.0.68"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "0f690853975602e1bfe1ccbf50504d67174e3bcf340f23b5ea9992e0587a52d8"
+dependencies = [
+ "itoa",
+ "ryu",
+ "serde",
+]
+
+[[package]]
 name = "smallvec"
 version = "1.7.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -456,7 +477,6 @@ checksum = "a2eb9349b6444b326872e140eb1cf5e7c522154d69e7a0ffb0fb81c06b37543f"
 [[package]]
 name = "sycamore"
 version = "0.6.1"
-source = "git+https://github.com/sycamore-rs/sycamore.git#ca21aba027af442114549dd98002ac7f07221281"
 dependencies = [
  "ahash",
  "html-escape",
@@ -480,13 +500,15 @@ dependencies = [
  "core-foundation",
  "core-graphics",
  "objc",
+ "objc_id",
+ "serde_json",
  "sycamore",
+ "web-sys",
 ]
 
 [[package]]
 name = "sycamore-macro"
 version = "0.6.1"
-source = "git+https://github.com/sycamore-rs/sycamore.git#ca21aba027af442114549dd98002ac7f07221281"
 dependencies = [
  "once_cell",
  "proc-macro2",
@@ -497,7 +519,6 @@ dependencies = [
 [[package]]
 name = "sycamore-reactive"
 version = "0.6.1"
-source = "git+https://github.com/sycamore-rs/sycamore.git#ca21aba027af442114549dd98002ac7f07221281"
 dependencies = [
  "ahash",
  "indexmap",

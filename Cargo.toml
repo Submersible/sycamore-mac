@@ -4,11 +4,22 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-sycamore = { git = "https://github.com/sycamore-rs/sycamore.git", features = [
+sycamore = { path = "./ext/sycamore/packages/sycamore", features = [
     "ssr",
-] }
+    # "serde",
+], default-features = false }
+cacao = { path = "./ext/cacao" }
 objc = "*"
 core-foundation = "*"
 cocoa = "*"
 core-graphics = { version = "*", features = ["highsierra", "elcapitan"] }
-cacao = "*"
+web-sys = { version = "*" }
+serde_json = "*"
+
+[dependencies.objc_id]
+version = "0.1.1"
+
+
+[[example]]
+name = "simple_example"
+crate-type = ["bin"]

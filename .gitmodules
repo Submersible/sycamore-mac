@@ -1,0 +1,6 @@
+[submodule "ext/sycamore"]
+	path = ext/sycamore
+	url = https://github.com/sycamore-rs/sycamore.git ext/sycamore
+[submodule "ext/cacao"]
+	path = ext/cacao
+	url = https://github.com/ryanmcgrath/cacao.git

@@ -1,6 +1,6 @@
 # sycamore-mac
 
-![](screenshot/screenshot.png)
+![](screenshot/screenshot.gif)
 
 Yes that window is transparent. :}
 
